@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="temp_converter.css" />
+    <title>Temperature Converter</title>
+    
+    <script type="text/javascript">
+        function conv(){
+            var i=document.getElementById("i").value;
+            var temp=0;
+            if(document.getElementById("inpt").value=="celsius"){
+                temp=i;
+            }
+            else if(document.getElementById("inpt").value=="kelvin"){
+                temp=i-273;
+            }
+            else{
+                temp=(i-32)*0.556;
+            }
+
+
+            if(document.getElementById("outp").value=="celsius"){
+                document.getElementById("o").value=temp;
+            }
+            else if(document.getElementById("outp").value=="kelvin"){
+                document.getElementById("o").value=temp+273;
+            }
+            else{
+                document.getElementById("o").value=(temp*1.8)+32;
+            }
+            
+        }
+
+        function res(){
+            document.getElementById("i").value="";
+            document.getElementById("o").value="";
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    <hr>
+
+    <p><b>Select the input temperature type and select the temperature type you want at the out put.</b></p>
+    <p><b>To convert the temperature click convert button.</b></p>
+    <p><b>To reset the values click the reset button.</b></p>
+    <br><br><br>
+
+    <form id="in">
+        <label id="inp">Input Temperature</label>
+        <input id="i" type="number">
+        <select id="inpt">
+          <option value="celsius">celsius</option>
+          <option value="farenheit">farenheit</option>
+          <option value="kelvin">kelvin</option>
+        </select>
+        <br>
+      </form>
+
+
+      <form id="ou">
+        <label id="out">Output Temperature</label>
+        <input id="o" type="number">
+        <select id="outp">
+          <option value="celsius">celsius</option>
+          <option value="farenheit">farenheit</option>
+          <option value="kelvin">kelvin</option>
+        </select>
+        <br>
+      </form>
+      <br><br>
+
+      <button onclick="conv()" id="convert">Convert</button>
+      <button onclick="res()"  id="reset">Reset</button>
+
+</body>
+</html>

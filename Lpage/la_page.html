@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="la_page.css" />
+    <title>LandingPage</title>
+    <script type="text/javascript">
+        function hi()
+        {
+            document.getElementById("search").value="";
+            alert("login first");
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <p id="main">ABtesting<span class="full">.</span>ai</p>
+        <table id="head">
+            <tr>
+                <td class="header">Home</td>
+                <td class="header">Pricing</td>
+                <td class="header">Contact</td>
+                <td class="header"><button>Login</button></td>
+            </tr>
+        </table>
+    </header>
+    <div id="middle">
+        <p id="yes">Optimize conversions<span class="text"> on your client's landing pages with the help of </span>AI<span class="full">.</span></p>
+        <p>ABtesting.ai <span class="text">Artificial Intelligence</span> to create the easiest,quickest and most efficient landing page<span class="text">A/B testing</span> experience. <span class="text">Welcome to automation.</span></p>
+    </div>
+
+    <div id="cen">
+        <table>
+            <tr>
+                <td> <input id="search" type="text" placeholder="start A/B testing free"> </td>
+                <td> <button onclick="hi()" id="start">start</button></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>
